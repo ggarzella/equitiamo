@@ -1,0 +1,197 @@
+/*
+Theme Name: Equitiamo
+Theme URI:
+Author: Giovanni Garzella
+Author URI:
+Description: The 2016 theme for twentieth anniversary of Equitiamo
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body, html { padding: 0px; overflow-x: hidden; vertical-align: top; color:#fff; font-size: 17px; font-family: Raleway, Arial, sans-serif; line-height: 1.7; }
+
+@font-face {
+    font-family: Raleway;
+    src: url("fonts/Raleway-Regular.ttf");
+    font-weight: normal;
+}
+
+body {
+    background-attachment: scroll;
+    background-image: url("images/wood.jpg");
+    background-position: center top;
+    background-repeat: repeat;
+}
+
+.row { margin: 0; }
+
+.comment-form .col-md-6 {
+    padding: 0;
+}
+
+.contatti p {
+    line-height: 2.5;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+h2 {
+    margin: 0;
+    padding: 20px 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+a.more-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+    height: 700px;
+    max-height: 700px;
+}
+
+
+
+.navbar a  { color: #fff; }
+.navbar-fixed-top { width: 970px; margin: 0 auto }
+.navbar { text-transform: uppercase; background-color: #1d472b; background-image: none; border:none; font-size: 14px; }
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a { color:#efcd0e; }
+
+.container-fluid { padding: 0; }
+
+.in-panel { width: 970px; margin: 0 auto; padding: 40px 0; }
+.in-panel h2 { text-transform: uppercase; font-size: 40px; float: left; font-weight: 600; }
+.in-panel p {
+    margin: 0;
+    padding-bottom: 30px;
+    clear: both;
+}
+
+.mask { background: rgba(0, 0, 0, 0.2); margin-left: -15px; margin-right: -15px; }
+
+.blog, .single { background: no-repeat 100% 0 fixed; min-height: 700px; color:#000; }
+.blog { margin-top: 50px; }
+.single { margin-top: 0px; }
+
+.blog.in-panel, .single.in-panel { background: no-repeat 100% 0 fixed; color:#000; background-position: 0px; }
+.blog.in-panel .title, .single.in-panel .title { padding: 0; }
+.blog.in-panel .details, .single.in-panel .details { padding: 0 0 20px 0; font-size: 15px; }
+.blog.in-panel .content, .single.in-panel .content { padding: 0; }
+
+.blog a.more-link, .single a.more-link { text-align: left; }
+
+#single img.img-responsive {
+    border: 5px solid #fff;
+}
+
+.attivita { color:#000; min-height: 700px; }
+
+.dove-siamo { background: no-repeat 100% 0 fixed; color:#000; min-height: 400px; }
+
+.prezzi { background: url(images/22.jpg) no-repeat 100% 0 fixed; background-size: cover; background-position: center center !important; }
+.prezzi a { color:#fff; }
+
+.contatti { background: url(images/20.jpg) no-repeat 100% 0 fixed; background-size: cover; background-position: center center !important; }
+.contatti a { color:#fff; }
+
+.footer { background: #1d472b; border: none; margin: 0; padding: 10px; }
+.footer p { font-size: 15px; color:#efcd0e; margin: 0 auto; width: 970px; }
+
+img.pixel { width: 100%; height: 100%; opacity: 0.5;
+    filter: alpha(opacity=50);  }
+
+@media ( max-width: 992px ) {
+
+    .navbar-fixed-top { width: 100%; margin-top: 0 }
+
+    .in-panel { width: 90%; }
+
+    .full-panel { background-position: 0 0!important; }
+
+    .footer p { font-size: 15px; width: 90%; }
+
+    .col-md-6 {
+        padding: 0;
+    }
+}
+
+.box-lined { background: rgba(255, 255, 255, 0.14); border: 1px solid #000; padding: 30px; margin-bottom: 30px; min-height: 477px; box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.12); }
+
+
+.box-lined h3 { margin-bottom: 10px; text-align: center; }
+.box-lined p { line-height: 1.7; }
+.box-lined ul { padding-top: 10px; }
+.box-lined li { margin-bottom: 10px; }
+
+.post-divisor { border: 1px solid #000; }
+.post-divisor:last-child { overflow: hidden; display: none; }
+
+.blog .post-container {
+    padding: 60px 0;
+    display: inline-block;
+}
+
+span.glyphicon:not(:first-child) { margin-left: 10px; }
+
+
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+    position: absolute !important;
+    white-space: nowrap;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+
+ul.pagination {
+    padding: 0;
+    margin: 20px 0 0 0;
+    float: right;
+}
+
+ul.pagination li a {
+    color: #efcd0e;
+    background-color: #1d472b;
+    border: transparent;
+}
+
+ul.pagination li span {
+    border: transparent;
+}
+
+@media ( min-width: 992px ) {
+
+    .col-md-6 {
+        padding: 0;
+    }
+
+    .col-md-6:nth-child(2n) {
+        padding-left: 15px;
+    }
+
+    .col-md-6:nth-child(2n+1) {
+        padding-right: 15px;
+    }
+}

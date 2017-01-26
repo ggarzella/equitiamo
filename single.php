@@ -6,7 +6,7 @@
 
     <div class="row">
 
-        <div class="in-panel full-panel single" id="single">
+        <div class="in-panel full-panel" id="single">
 
             <?php
 
@@ -28,7 +28,6 @@
 
                         </div>
                     </div>
-                    <div class="col-md-12 col-xs-12 space-bottom"></div>
             <?php
 
                     endwhile;

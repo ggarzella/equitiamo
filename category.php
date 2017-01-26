@@ -6,7 +6,7 @@
 
     <div class="row">
 
-        <div class="in-panel full-panel blog" id="blog">
+        <div class="in-panel full-panel" id="blog">
 
             <?php
                 $query = equitiamo_get_blog_post();

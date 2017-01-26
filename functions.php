@@ -2,6 +2,7 @@
 
 function equitiamo_add_inclusions() {
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+    wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css' );
     wp_enqueue_style( 'style-css', get_template_directory_uri() . '/style.css' );
     wp_deregister_script('jquery');
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/jquery/jquery.min.js' );
@@ -65,6 +66,7 @@ function equitiamo_show_menu($themeName) {
         array(
             'theme_location' => $themeName,
             'container_class' => 'container',
+            'container_id' => 'home',
             'menu_class' => 'nav navbar-nav',
             'items_wrap' => '<div class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
 							<div class="navbar-header">
@@ -74,7 +76,10 @@ function equitiamo_show_menu($themeName) {
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="' . $home . '">Equitiamo</a>
+								<a class="navbar-brand" href="' . $home . '">
+								    <!--<img src="' . get_template_directory_uri() . '/images/logCEN.png" class="logo img-responsive"/>-->
+								    Equitiamo
+								</a>
 							</div>
 							<div class="collapse navbar-collapse">
 								<ul class="%2$s">%3$s</ul>

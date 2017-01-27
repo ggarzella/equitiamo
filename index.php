@@ -8,9 +8,7 @@
 
 <div class="container-fluid">
 
-	<div class="row">
-		<div class="col-md-12 col-xs-12 nopadding attivita">
-			<div class="in-panel" id="attivita">
+	<div class="in-panel" id="attivita">
 				<h2><?php show_title('attivita'); ?></h2>
 				<p><?php show_post('attivita'); ?></p>
 				<?php
@@ -39,15 +37,13 @@
 					<?php
 							$counter++;
 
-							if ($counter % 2 == 0) echo '</div>';
+							if ($counter % 2 == 0 || $counter == $query->post_count ) echo '</div>';
 
 						endwhile;
 
 					endif;
 				?>
 			</div>
-		</div>
-	</div>
 
 	<div class="row">
 		<div class="col-md-12 col-xs-12 nopadding contatti">

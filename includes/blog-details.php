@@ -3,6 +3,6 @@
     <span><?php echo get_the_date( 'd-m-Y' ); ?></span>
     <span class="glyphicon glyphicon-user author"></span>
     <span><?php the_author(); ?></span>
-    <span class="glyphicon glyphicon-comment"></span>
-    <span><?php comments_number("Nessun commento") ?></span>
+    <!--<span class="glyphicon glyphicon-comment"></span>
+    <span><?php comments_number("Nessun commento") ?></span>-->
 </div>

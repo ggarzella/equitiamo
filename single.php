@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="nav-menu-separator">
+<div class="nav-menu-separator" id="single">
 
-    <div class="in-panel" id="single">
+    <div class="in-panel">
 
         <?php
 

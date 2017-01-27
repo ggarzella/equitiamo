@@ -139,8 +139,6 @@ a.more-link {
 .text-mask { background: rgba(0, 0, 0, 0.5); padding: 5px; }
 .mask { background: rgba(0, 0, 0, 0.2); }
 
-
-#blog, #single { margin-top: 0px; }
 #blog, #single { color:#000; }
 #blog .title, #single .title { padding: 0; }
 #blog .details, #single .details { padding: 0 0 20px 0; font-size: 15px; }
@@ -151,7 +149,7 @@ a.more-link {
 
 #contatti { background: url(images/20.jpg) no-repeat 100% 0 fixed; background-size: cover; background-position: center center !important; color:#fff; }
 
-#contatti a { color:#fff; }
+#contatti a, #prezzi a { color:#fff; }
 
 #contatti p { line-height: 2.5; }
 

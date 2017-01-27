@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="nav-menu-separator">
+<div class="nav-menu-separator" id="blog">
 
-    <div class="in-panel" id="blog">
+    <div class="in-panel">
 
         <?php
             $query = equitiamo_get_blog_post();

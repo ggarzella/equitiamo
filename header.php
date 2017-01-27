@@ -18,3 +18,11 @@
     </head>
 
     <body data-spy="scroll" data-target="#my-navbar">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-xs-12 col-md-12 nopadding">
+
+                    <?php is_home() ? equitiamo_show_menu('equitiamo-index') : equitiamo_show_menu('equitiamo-page'); ?>

@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-<?php equitiamo_show_menu('equitiamo-page'); ?>
-
-<div class="container-fluid">
+<div class="nav-menu-separator">
 
     <div class="in-panel" id="single">
 
@@ -35,5 +33,7 @@
         ?>
 
     </div>
+
+</div>
 
 <?php get_footer(); ?>

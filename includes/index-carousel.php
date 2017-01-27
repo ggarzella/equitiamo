@@ -1,4 +1,4 @@
-<div class="full-panel">
+<div class="nav-menu-separator">
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="false">
 

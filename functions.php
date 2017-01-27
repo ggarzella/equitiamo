@@ -65,7 +65,7 @@ function equitiamo_show_menu($themeName) {
     wp_nav_menu(
         array(
             'theme_location' => $themeName,
-            'container_class' => 'container',
+            'container_class' => 'navbar-container',
             'container_id' => 'home',
             'menu_class' => 'nav navbar-nav',
             'items_wrap' => '<div class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">

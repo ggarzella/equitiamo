@@ -2,7 +2,7 @@
 
 <?php equitiamo_show_menu('equitiamo-page'); ?>
 
-<div class="full-panel" id="page">
+<div id="page">
 
     <img class="img-responsive" src="<?=get_template_directory_uri()."/images/11-2.jpg"?>"/>
 
@@ -10,33 +10,25 @@
 
 <div class="container-fluid">
 
-    <div class="row">
+    <div class="in-panel" id="single">
 
-        <div class="col-md-12 full-panel single">
+        <?php
 
-            <div class="in-panel" id="attivita">
+            if ( have_posts() ):
 
-                <?php
+                while (have_posts()):
 
-                    if ( have_posts() ):
+                the_post();
+        ?>
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php the_content(); ?></p>
+        <?php
 
-                        while (have_posts()):
+                endwhile;
 
-                        the_post();
-                ?>
-                            <h2><?php the_title(); ?></h2>
-                            <p><?php the_content(); ?></p>
-                <?php
+            endif;
 
-                        endwhile;
-
-                    endif;
-
-                ?>
-
-            </div>
-
-        </div>
+        ?>
 
     </div>
 

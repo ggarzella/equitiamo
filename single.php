@@ -18,8 +18,7 @@
                     </div>
                     <?php get_template_part('includes/blog', 'details'); ?>
                     <div class="col-md-12 col-xs-12 content">
-                        <p><?php the_content(); ?></p>
-
+                        <?php the_content(); ?>
                         <?php //comments_template('/comments_template.php'); ?>
 
                     </div>

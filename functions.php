@@ -177,7 +177,6 @@ function equitiamo_image_class_filter($classes) {
 add_filter('get_image_tag_class', 'equitiamo_image_class_filter');
 
 
-add_filter('image_size_names_choose', 'rudr_new_image_sizes');
 
 function rudr_new_image_sizes($sizes) {
     $addsizes = array(
@@ -186,8 +185,14 @@ function rudr_new_image_sizes($sizes) {
     $newsizes = array_merge($sizes, $addsizes);
     return $newsizes;
 }
+add_filter('image_size_names_choose', 'rudr_new_image_sizes');
 
 add_image_size( 'equitiamo-image-size-name', 600, 600, false );
+
+function iframe_func($atts, $content = null){
+    return '<div class="iframe_wrap"><iframe src="' . $content . '" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+}
+add_shortcode('video', 'iframe_func');
 
 /*
 function add_excerpts_to_pages() {

@@ -61,7 +61,7 @@
 	<div class="in-panel">
 		<h2><?php show_title('dove-siamo'); ?></h2>
 		<p><?php show_post('dove-siamo'); ?></p>
-		<div class="googlemap_wrap">
+		<div class="iframe_wrap">
 			<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOzOxQ9mW1RIRTpznuONLClw&key=AIzaSyDCe0tVLZDuRPqAY4Z-thW0dqgka0_P1fo" allowfullscreen></iframe>
 		</div>
 	</div>

@@ -351,6 +351,9 @@ a.more-link {
 
 #single .content img {
     padding: 0 10px 10px 0;
+}
+
+#single .content .iframe_wrap, #single .content img {
     float: left;
 }
 
@@ -380,9 +383,11 @@ ul.pagination li span {
 /* Google maps */
 .iframe_wrap {
     position: relative;
-    padding-bottom: 65.25%;
-    padding-top: 30px;
+    padding-bottom: 30%;
+    padding-top: 0;
+    margin-right: 20px;
     height: 0;
+    width: 50%;
     overflow: hidden;
     border:1px solid #000;
 }

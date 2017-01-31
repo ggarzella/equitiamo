@@ -194,21 +194,3 @@ function iframe_func($atts, $content = null){
     return '<div class="iframe_wrap"><iframe src="' . $content . '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
 }
 add_shortcode('video', 'iframe_func');
-
-/*
-function add_excerpts_to_pages() {
-    add_post_type_support( 'page', 'excerpt' );
-}
-add_action( 'init', 'add_excerpts_to_pages' );
-*/
-
-function my_redirect() {
-    //if you have the page id of landing. I would tell you to use if( is_page('page id here') instead
-    //Don't redirect if user is logged in or user is trying to sign up or sign in
-    if(!is_user_logged_in()){
-        //wp_redirect(get_page_by_path('under-construction'));
-        print_r(get_page_by_path('under-construction'));
-        exit;
-    }
-}
-add_action( 'template_redirect', 'my_redirect' );

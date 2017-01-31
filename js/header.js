@@ -1,11 +1,9 @@
 jQuery(document).ready(function(){
-      
-	jQuery('body').scrollspy({ target: '#my-navbar' });
 
-	if (window.location.href.match('#')) {
+	if (window.location.href.match('#'))
 		jQuery('#logo-container').remove();
-		jQuery('.navbar-brand').show();
-	}
+
+	jQuery('body').scrollspy({ target: '#my-navbar' });
 
     jQuery(".navbar-collapse ul li a[href^='#'], a[href^='#'].navbar-brand").on('click', function(e) {
 	    
@@ -29,13 +27,13 @@ jQuery(document).ready(function(){
 	jQuerywindow = jQuery(window);
 
 	jQuery('.full-panel').each(function() {
+
 		// declare the variable to affect the defined data-type
 		var jQueryscroll = jQuery(this);
 
 		jQuery(window).scroll(function() {
 
 			jQuery('#logo-container').remove();
-			jQuery('.navbar-brand').show();
 
 			// HTML5 proves useful for helping with creating JS functions!
 			// also, negative value because we're scrolling upwards

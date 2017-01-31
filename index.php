@@ -1,12 +1,5 @@
 <?php get_header(); ?>
 
-<!--<div id="logo">
-	<div class="mask">
-		<img id="logo" witdh="200" height="203" class="img-responsive" src="<?=get_template_directory_uri() ?>/images/logo.png">
-		<span>Equitiamo in San Rossore</span>
-	</div>
-</div>-->
-
 <?php get_template_part('includes/index', 'carousel'); ?>
 
 <div class="row">

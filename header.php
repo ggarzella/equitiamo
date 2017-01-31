@@ -26,3 +26,24 @@
                 <div class="col-xs-12 col-md-12 nopadding">
 
                     <?php is_home() ? equitiamo_show_menu('equitiamo-index') : equitiamo_show_menu('equitiamo-page'); ?>
+
+                    <div class="nav-menu-separator"></div>
+
+                    <?php if(is_home()): ?>
+
+                        <div class="row" id="logo-container">
+
+                            <div class="col-md-4 col-xs-4 col-md-offset-4 col-xs-offset-4"/>
+
+                                <div id="site-logo">
+                                    <h1 id="site-title">
+                                        Equitiamo
+                                    </h1>
+                                    <p id="site-description">Centro Equitazione Naturale San Rossore</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    <?php endif; ?>

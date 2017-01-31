@@ -8,7 +8,7 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
-Text Domain: twentythirteen
+Text Domain: equitiamo
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -24,12 +24,6 @@ body, html {
     line-height: 1.7;
 }
 
-@font-face {
-    font-family: Raleway;
-    src: url("fonts/Raleway-Regular.ttf");
-    font-weight: normal;
-}
-
 body {
     background-attachment: scroll;
     background-image: url("images/wood.jpg");
@@ -37,14 +31,43 @@ body {
     background-repeat: repeat;
 }
 
+@font-face {
+    font-family: Raleway;
+    src: url("fonts/Raleway-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url("font-awesome/fonts/fontawesome-webfont.ttf");
+    font-weight: normal;
+}
+
 .nav-menu-separator {
     margin-top: 50px;
 }
 
-img#logo {
-    position: absolute;
-    margin: 10%;
-    z-index: 1;
+#site-logo {
+    background: url(images/logo.jpg) no-repeat scroll left center;
+    display: inline-block;
+    padding: 25px 0;
+    padding-left: 203px;
+    margin-top: 0;
+}
+
+#site-title {
+    font-size: 60px;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    color: #1d472b;
+}
+
+#site-description {
+    font-size: 14px;
+    color: #1d472b;
+    margin: 0 0 27px;
+    font-weight: 900;
 }
 
 /*#logo {
@@ -59,6 +82,7 @@ img#logo {
 
 .row {
     margin: 0;
+    padding: 0;
 }
 
 .col-md-4 {
@@ -128,8 +152,9 @@ a.more-link {
 }
 
 .navbar a  { color: #fff; }
-.navbar { text-transform: uppercase; background-color: #1d472b; background-image: none; border:none; font-size: 14px; }
+.navbar { text-transform: uppercase; background-color: #1d472b; background-image: none; border:none; font-size: 14px; margin: 0; }
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a { color:#efcd0e; }
+.navbar-brand { display: none; }
 
 .container-fluid { padding: 0; }
 

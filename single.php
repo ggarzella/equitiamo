@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="nav-menu-separator" id="single">
+<div id="single">
 
     <div class="in-panel">
 

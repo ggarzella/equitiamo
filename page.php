@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="nav-menu-separator" id="page">
+<div id="page">
 
     <img class="img-responsive" src="<?=get_template_directory_uri()."/images/11-2.jpg"?>"/>
 

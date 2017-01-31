@@ -1,7 +1,12 @@
 jQuery(document).ready(function(){
       
 	jQuery('body').scrollspy({ target: '#my-navbar' });
- 
+
+	if (window.location.href.match('#')) {
+		jQuery('#logo-container').remove();
+		jQuery('.navbar-brand').show();
+	}
+
     jQuery(".navbar-collapse ul li a[href^='#'], a[href^='#'].navbar-brand").on('click', function(e) {
 	    
 	    target = this.hash;
@@ -28,6 +33,10 @@ jQuery(document).ready(function(){
 		var jQueryscroll = jQuery(this);
 
 		jQuery(window).scroll(function() {
+
+			jQuery('#logo-container').remove();
+			jQuery('.navbar-brand').show();
+
 			// HTML5 proves useful for helping with creating JS functions!
 			// also, negative value because we're scrolling upwards
 			var yPos = -(jQuerywindow.scrollTop() / 6);

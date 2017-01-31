@@ -60,6 +60,7 @@ function show_title($path) {
 
 function equitiamo_show_menu($themeName) {
 
+    $navbar_fixed_top = !is_home() ? ' navbar-fixed-top' : ' navbar-fixed-top';
     $home = is_home() ? '#home' : get_site_url() . '#home';
 
     wp_nav_menu(
@@ -68,7 +69,8 @@ function equitiamo_show_menu($themeName) {
             'container_class' => 'navbar-container',
             'container_id' => 'home',
             'menu_class' => 'nav navbar-nav',
-            'items_wrap' => '<div class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+            //'walker' => 'Walker_Equitiamo_Menu',
+            'items_wrap' => '<div class="navbar navbar-inverse' . $navbar_fixed_top . '" id="my-navbar">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 									<span class="icon-bar"></span>
@@ -76,11 +78,10 @@ function equitiamo_show_menu($themeName) {
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="' . $home . '">
-								    <!--<img src="' . get_template_directory_uri() . '/images/logCEN.png" class="logo img-responsive"/>-->
-								    Equitiamo
-								</a>
 							</div>
+							<!--<a class="navbar-brand" href="' . $home . '">
+                                Equitiamo
+                            </a>-->
 							<div class="collapse navbar-collapse">
 								<ul class="%2$s">%3$s</ul>
 							</div>
@@ -190,7 +191,7 @@ add_filter('image_size_names_choose', 'rudr_new_image_sizes');
 add_image_size( 'equitiamo-image-size-name', 600, 600, false );
 
 function iframe_func($atts, $content = null){
-    return '<div class="iframe_wrap"><iframe src="' . $content . '" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+    return '<div class="iframe_wrap"><iframe src="' . $content . '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
 }
 add_shortcode('video', 'iframe_func');
 
@@ -200,3 +201,14 @@ function add_excerpts_to_pages() {
 }
 add_action( 'init', 'add_excerpts_to_pages' );
 */
+
+function my_redirect() {
+    //if you have the page id of landing. I would tell you to use if( is_page('page id here') instead
+    //Don't redirect if user is logged in or user is trying to sign up or sign in
+    if(!is_user_logged_in()){
+        //wp_redirect(get_page_by_path('under-construction'));
+        print_r(get_page_by_path('under-construction'));
+        exit;
+    }
+}
+add_action( 'template_redirect', 'my_redirect' );

@@ -60,32 +60,29 @@ function show_title($path) {
 
 function equitiamo_show_menu($themeName) {
 
-    $navbar_fixed_top = !is_home() ? ' navbar-fixed-top' : ' navbar-fixed-top';
     $home = is_home() ? '#home' : get_site_url() . '#home';
 
     wp_nav_menu(
         array(
             'theme_location' => $themeName,
-            'container_class' => 'navbar-container',
-            'container_id' => 'home',
-            'menu_class' => 'nav navbar-nav',
+            'container_class' => 'navbar navbar-inverse',
+            'container_id' => 'my-navbar',
+            'menu_class' => 'nav navbar-nav navbar-left',
             //'walker' => 'Walker_Equitiamo_Menu',
-            'items_wrap' => '<div class="navbar navbar-inverse' . $navbar_fixed_top . '" id="my-navbar">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							<!--<a class="navbar-brand" href="' . $home . '">
-                                Equitiamo
-                            </a>-->
-							<div class="collapse navbar-collapse">
-								<ul class="%2$s">%3$s</ul>
-							</div>
-						</div>'
+            'items_wrap' => '<div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+								    <a class="navbar-brand" href="' . $home . '">Equitiamo</a>
+							    </div>
+                                <div class="collapse navbar-collapse">
+                                    <ul class="%2$s">%3$s</ul>
+                                </div>
+						    </div>'
         )
     );
 }
@@ -179,16 +176,18 @@ add_filter('get_image_tag_class', 'equitiamo_image_class_filter');
 
 
 
-function rudr_new_image_sizes($sizes) {
+function equitiamo_new_image_sizes($sizes) {
     $addsizes = array(
         "equitiamo-image-size-name" => 'Standard size'
     );
     $newsizes = array_merge($sizes, $addsizes);
     return $newsizes;
 }
-add_filter('image_size_names_choose', 'rudr_new_image_sizes');
+add_filter('image_size_names_choose', 'equitiamo_new_image_sizes');
 
 add_image_size( 'equitiamo-image-size-name', 600, 600, false );
+
+
 
 function iframe_func($atts, $content = null){
     return '<div class="iframe_wrap"><iframe src="' . $content . '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';

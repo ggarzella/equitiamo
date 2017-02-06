@@ -16,7 +16,7 @@
 
     </head>
 
-    <body data-spy="scroll" data-target="#my-navbar">
+    <body>
 
         <div class="container-fluid">
 
@@ -24,25 +24,25 @@
 
                 <div class="col-xs-12 col-md-12 nopadding">
 
-                    <?php is_home() ? equitiamo_show_menu('equitiamo-index') : equitiamo_show_menu('equitiamo-page'); ?>
-
-                    <div class="nav-menu-separator"></div>
-
                     <?php if(is_home()): ?>
 
                         <div class="row" id="logo-container">
 
-                            <div class="col-md-4 col-xs-4 col-md-offset-4 col-xs-offset-4"/>
+                            <div class="col-md-4 col-xs-4 col-md-offset-4 col-xs-offset-4">
 
-                                <div id="site-logo">
-                                    <h1 id="site-title">
-                                        Equitiamo
-                                    </h1>
-                                    <p id="site-description">Centro Equitazione Naturale San Rossore</p>
-                                </div>
+                                <img class="img-responsive" src="<?=get_template_directory_uri() ?>/images/logo.png">
 
                             </div>
 
                         </div>
 
                     <?php endif; ?>
+
+                    <div class="row navbar-container">
+
+                        <div class="col-md-10 col-sm-10 col-md-offset-2 col-sm-offset-2"/>
+
+                            <?php is_home() ? equitiamo_show_menu('equitiamo-index') : equitiamo_show_menu('equitiamo-page'); ?>
+                        </div>
+
+                    </div>

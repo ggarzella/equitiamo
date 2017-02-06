@@ -1,4 +1,4 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="false">
+<div id="home" class="carousel slide full-panel home" data-ride="carousel" data-interval="10000" data-pause="false">
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="item">
+        <!--<div class="item">
             <img class="img-responsive" src="<?=get_template_directory_uri()."/images/12.jpg"?>">
             <div class="carousel-caption">
                 <div class="text-mask">
@@ -40,7 +40,7 @@
                     <p>- William Shakespeare -</p>
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </div>
 </div>

@@ -193,3 +193,19 @@ function iframe_func($atts, $content = null){
     return '<div class="iframe_wrap"><iframe src="' . $content . '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
 }
 add_shortcode('video', 'iframe_func');
+
+
+
+/*function equitiamo_redirect() {
+    $page = get_page_by_path('nuovo-sito');
+    $url = get_permalink($page->ID);
+
+    var_dump(!is_user_logged_in());
+
+    if( !is_user_logged_in() ){
+        wp_redirect($url);
+        exit;
+    } else
+        return;
+}
+add_action( 'template_redirect', 'equitiamo_redirect' );*/

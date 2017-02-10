@@ -75,7 +75,6 @@ function equitiamo_show_menu($themeName) {
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
                                     </button>
 								    <a class="navbar-brand" href="' . $home . '">Equitiamo</a>
 							    </div>
@@ -189,8 +188,14 @@ add_image_size( 'equitiamo-image-size-name', 600, 600, false );
 
 
 
-function iframe_func($atts, $content = null){
+/*function iframe_func($atts, $content = null){
     return '<div class="iframe_wrap"><iframe src="' . $content . '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+}
+add_shortcode('video', 'iframe_func');*/
+
+
+function iframe_func($atts, $content = null){
+    return '<div class="embed-responsive embed-responsive-4by3"><iframe src="' . $content . '" class="embed-responsive-item"></iframe></div>';
 }
 add_shortcode('video', 'iframe_func');
 

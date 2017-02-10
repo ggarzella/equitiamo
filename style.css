@@ -100,19 +100,19 @@ h2 {
 .footer { background: #1d472b; overflow: hidden; }
 .footer > div { color:#efcd0e; }
 
-.social-container hr {
+#social hr {
     background-color: #000;
     border: 0 none;
     clear: none;
     height: 1px;
 }
 
-.in-panel.social-container {
+#social .in-panel {
     padding: 30px;
     width: 60%;
 }
 
-.in-panel.social-container a {
+#social .in-panel a {
     padding: 20px;
 }
 
@@ -142,11 +142,17 @@ a.more-link {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 /* Navbar */
-.navbar-container { width: 100%; background-color: #1d472b; position: relative; }
+.navbar-container { width: 100%; margin: 0 auto; background-color: #1d472b; position: relative; }
 .navbar-container.fixed { position: fixed; top: 0; z-index: 99999; }
 .navbar { text-transform: uppercase; background-color: #1d472b; background-image: none; border:none; font-size: 14px; margin: 0; }
 .navbar a  { color: #fff; }
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:focus { color: #efcd0e; }
+.navbar-brand { display: none; }
+/*.navbar-toggle .icon-bar {
+    border-radius: 6px;
+}*/
+
+#my-navbar { width: 80%; margin: 0 auto; }
 
 .container-fluid { padding: 0; }
 
@@ -191,6 +197,8 @@ a.more-link {
 
     .in-panel { width: 90%; }
 
+    #my-navbar { width: 90%; margin: 0 auto; }
+
     .in-panel h2 { font-size: 30px; }
     .carousel-caption h3 { font-size: 14px; }
     .carousel-caption p { font-size: 12px; }
@@ -202,6 +210,12 @@ a.more-link {
     .navbar-brand { font-size: 13px; }
 
     body { font-size: 12px; }
+
+    #social { font-size: 10px; }
+
+    #social .in-panel a { padding: 6px; }
+
+    #coming-soon { width: 95%; }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -209,6 +223,8 @@ a.more-link {
     /*.navbar-fixed-top { margin-top: 0 }*/
 
     .in-panel { width: 90%; }
+
+    #my-navbar { width: 90%; margin: 0 auto; }
 
     .box-lined { min-height: 0px; height: auto; margin-bottom: 30px; padding: 30px; }
 
@@ -222,7 +238,13 @@ a.more-link {
 
     .navbar { font-size: 10px; }
 
-    body { font-size: 13px; }
+    body { font-size: 15px; }
+
+    #social { font-size: 12px; }
+
+    #social .in-panel a { padding: 8px; }
+
+    #coming-soon { width: 95%; }
 }
 
 @media  (min-width: 480px) and (max-width: 768px) {
@@ -230,6 +252,8 @@ a.more-link {
     /*.navbar-fixed-top { margin-top: 0 }*/
 
     .in-panel { width: 90%; }
+
+    #my-navbar { width: 90%; margin: 0 auto; }
 
     .in-panel h2 { font-size: 34px; }
     .carousel-caption h3 { font-size: 17px; }
@@ -241,7 +265,11 @@ a.more-link {
 
     .navbar { font-size: 11px; }
 
-    body { font-size: 14px; }
+    body { font-size: 15px; }
+
+    #social .in-panel a { padding: 10px; }
+
+    #coming-soon { width: 95%; }
 }
 
 @media  (min-width: 768px) and (max-width: 992px) {
@@ -249,6 +277,8 @@ a.more-link {
     /*.navbar-fixed-top { margin-top: 0 }*/
 
     .in-panel { width: 90%; }
+
+    #my-navbar { width: 90%; margin: 0 auto; }
 
     .in-panel h2 { font-size: 36px; }
     .carousel-caption h3 { font-size: 18px; }
@@ -261,6 +291,8 @@ a.more-link {
     .navbar { font-size: 12px; }
 
     body { font-size: 15px; }
+
+    #coming-soon { width: 85%; }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -286,6 +318,8 @@ a.more-link {
     .navbar { font-size: 13px; }
 
     body { font-size: 16px; }
+
+    #coming-soon { width: 85%; }
 }
 
 @media (min-width: 1200px) {
@@ -311,6 +345,8 @@ a.more-link {
     .navbar { font-size: 14px; }
 
     body { font-size: 17px; }
+
+    #coming-soon { width: 85%; }
 }
 
 .col-md-6 {
@@ -372,11 +408,11 @@ ul.pagination li span {
 /* Google maps */
 .iframe_wrap {
     position: relative;
-    padding-bottom: 30%;
+    padding-bottom: 50%;
     padding-top: 0;
     margin-right: 20px;
     height: 0;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
     border:1px solid #000;
 }

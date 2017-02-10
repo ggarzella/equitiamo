@@ -25,6 +25,14 @@
             vertical-align: middle;
             text-align: center;
         }
+
+        .centered {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
     </style>
 
     <?php wp_head(); ?>
@@ -32,11 +40,13 @@
 </head>
 
 <body>
-    <table id="wrapper">
+    <!--<table id="wrapper">
         <tr>
-            <td><img class="img-responsive center-block" src="<?=get_template_directory_uri() ?>/images/logo-under-construction.png" style="width: 50%;">
+            <td>
+                <img id="coming-soon" src="<?=get_template_directory_uri() ?>/images/logo-under-construction.png"/>
             </td>
         </tr>
-    </table>
+    </table>-->
+    <img id="coming-soon" class="centered" src="<?=get_template_directory_uri() ?>/images/logo-under-construction.png"/>
 </body>
 </html>

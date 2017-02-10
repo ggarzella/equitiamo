@@ -1,46 +1,53 @@
 jQuery(document).ready(function(){
 
-	var logoHeight = Math.round(jQuery('#logo-container').height()),
-		menuHeight = Math.round(jQuery('.navbar-container').height());
+	var logoHeight = Math.round(jQuery('#logo-container').outerHeight(true)),
+		menuHeight = Math.round(jQuery('.navbar-container').outerHeight(true)),
+		collapseMenuHeight;
 
 	var processScroll = function (target)
 	{
-		var top = Math.round(jQuery(target).offset().top) - menuHeight + 1;
+		var delta = 0;
+
+		if (!jQuery('.navbar-container').hasClass('fixed'))
+			delta = isNaN(collapseMenuHeight) ? 0 : collapseMenuHeight;
+
+		var top = Math.round(jQuery(target).offset().top) - menuHeight - delta;
 
 		return top;
 	};
 
 	var fixedNavbarOnScroll = function ()
 	{
-		if (Math.round(jQuery(window).scrollTop()) > Math.round(jQuery('#logo-container').innerHeight())) {
+		if (Math.round(jQuery(window).scrollTop()) > logoHeight) {
 
 			if (!jQuery('.navbar-container').hasClass('fixed')) {
-				console.log(Math.round(jQuery(window).scrollTop()));
-				console.log("Logo height : " + logoHeight);
-				console.log("Menu height : " + menuHeight);
-
 				jQuery('.navbar-container').addClass('fixed');
-				jQuery('.mainContent').css('margin-top', menuHeight);
+				jQuery('.mainContent').css('padding-top', menuHeight+'px');
+				jQuery('.navbar-brand').show();
 			}
 
 		} else {
 
 			if (jQuery('.navbar-container').hasClass('fixed')) {
 				jQuery('.navbar-container').removeClass('fixed');
-				jQuery('.mainContent').css('margin-top', 0);
-				console.log("not fixed");
+				jQuery('.mainContent').css('padding-top', 0);
+				jQuery('.navbar-brand').hide();
 			}
 		}
-	}
+	};
 
 	jQuery(".navbar-collapse ul li a[href^='#'], a[href^='#'].navbar-brand").on('click', function(e) {
-
-		console.log("click");
 
 		// prevent default anchor click behavior
 		e.preventDefault();
 
 		target = this.hash;
+
+		collapseMenuHeight = jQuery('.navbar-collapse.collapse.in').height();
+
+		if (jQuery('.navbar-toggle.collapsed').is(":visible") && jQuery(e.target).hasClass('navbar-brand') === false) {
+			jQuery('.navbar-toggle.collapsed').click(); //bootstrap 3.x by Richard
+		}
 
 		// animate
 		jQuery('html, body').animate({
@@ -50,16 +57,14 @@ jQuery(document).ready(function(){
 			// Animation complete
 			// when done, add hash to url
 			// (default click behaviour)
-			// window.location.hash = target;
+			//document.location.hash = target;
 
-			history.pushState(null, null, target);
-
-			if(history.pushState)
+			if(history.pushState) {
 				history.pushState(null, null, target);
-			else
+			}
+			else {
 				location.hash = target;
-
-			return false;
+			}
 		});
 
     });
@@ -74,14 +79,10 @@ jQuery(document).ready(function(){
 
 	jQuery('.full-panel').each(function() {
 
-		//console.log("each");
-
 		// declare the variable to affect the defined data-type
 		var jQueryscroll = jQuery(this);
 
 		jQuery(window).scroll(function() {
-
-			//console.log("scroll");
 
 			// HTML5 proves useful for helping with creating JS functions!
 			// also, negative value because we're scrolling upwards

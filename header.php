@@ -1,7 +1,7 @@
 <?php
 
 if (!is_user_logged_in())
-    wp_redirect(home_url('/nuovo-sito'));
+    wp_safe_redirect(home_url('/nuovo-sito'));
 
 ?>
 
@@ -35,7 +35,7 @@ if (!is_user_logged_in())
 
                         <div class="row" id="logo-container">
 
-                            <div class="col-md-4 col-xs-4 col-md-offset-4 col-xs-offset-4">
+                            <div class="col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1">
 
                                 <img class="img-responsive" src="<?=get_template_directory_uri() ?>/images/logo.png">
 
@@ -47,7 +47,8 @@ if (!is_user_logged_in())
 
                     <div class="row navbar-container">
 
-                        <div class="col-md-10 col-sm-10 col-md-offset-2 col-sm-offset-2"/>
+                        <!--<div class="col-md-10 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-2"/>-->
+                        <div class="col-md-12 nopadding"/>
 
                             <?php is_home() ? equitiamo_show_menu('equitiamo-index') : equitiamo_show_menu('equitiamo-page'); ?>
                         </div>

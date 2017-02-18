@@ -1,4 +1,4 @@
-<div id="home" class="carousel slide full-panel home" data-ride="carousel" data-interval="10000" data-pause="false">
+<div id="home" class="carousel slide home" data-ride="carousel" data-interval="10000" data-pause="false">
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">

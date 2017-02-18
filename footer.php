@@ -5,7 +5,7 @@
     <div class="footer">
             <div class="row">
                 <div class="col-xs-12 col-md-12 nopadding center-block text-center">
-                    <p>Copyright © 1996 - 2016 Equitiamo di Valeria Gambogi - Partita IVA & Codice Fiscale: 01639580503</p>
+                    <p>Copyright © 1996 - 2016 Equitiamo di Valeria Gambogi<br/>Partita IVA & Codice Fiscale: 01639580503</p>
                 </div>
             </div>
             <div class="row">
@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-12 nopadding center-block text-center">
-                    <p>Sito realizzato da Giovanni Battista Garzella - Foto di Cristiana Ramacciotti Leoncini e Alberto Giampuzzi</p>
+                    <p>Tema Equitiamo realizzato da Giovanni Battista Garzella<br/>Foto di Cristiana Ramacciotti Leoncini e Alberto Giampuzzi</p>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
-jQuery(document).ready(function(){
-
+jQuery(document).ready(function()
+{
 	var logoHeight = Math.round(jQuery('#logo-container').outerHeight(true)),
 		menuHeight = Math.round(jQuery('.navbar-container').outerHeight(true)),
 		collapseMenuHeight;
@@ -18,12 +18,12 @@ jQuery(document).ready(function(){
 
 	var fixedNavbarOnScroll = function ()
 	{
-		if (Math.round(jQuery(window).scrollTop()) > logoHeight) {
+		if (Math.round(jQuery(window).scrollTop()) > logoHeight || jQuery('#logo-container').length === 0) {
 
 			if (!jQuery('.navbar-container').hasClass('fixed')) {
 				jQuery('.navbar-container').addClass('fixed');
 				jQuery('.mainContent').css('padding-top', menuHeight+'px');
-				jQuery('.navbar-brand').show();
+				//jQuery('.navbar-brand').show();
 			}
 
 		} else {
@@ -31,7 +31,7 @@ jQuery(document).ready(function(){
 			if (jQuery('.navbar-container').hasClass('fixed')) {
 				jQuery('.navbar-container').removeClass('fixed');
 				jQuery('.mainContent').css('padding-top', 0);
-				jQuery('.navbar-brand').hide();
+				//jQuery('.navbar-brand').hide();
 			}
 		}
 	};
@@ -45,19 +45,14 @@ jQuery(document).ready(function(){
 
 		collapseMenuHeight = jQuery('.navbar-collapse.collapse.in').height();
 
-		if (jQuery('.navbar-toggle.collapsed').is(":visible") && jQuery(e.target).hasClass('navbar-brand') === false) {
+		if (jQuery('.navbar-toggle.collapsed').is(":visible") && jQuery(e.target).hasClass('navbar-brand') === false)
 			jQuery('.navbar-toggle.collapsed').click(); //bootstrap 3.x by Richard
-		}
 
 		// animate
 		jQuery('html, body').animate({
 			scrollTop: processScroll(target)
 		}, 300, function() {
 		}).promise().then(function() {
-			// Animation complete
-			// when done, add hash to url
-			// (default click behaviour)
-			//document.location.hash = target;
 
 			if(history.pushState) {
 				history.pushState(null, null, target);
@@ -74,13 +69,12 @@ jQuery(document).ready(function(){
 
 	jQuery('body').scrollspy({ target: '#my-navbar', offset: menuHeight + 1 });
 
-	if (window.location.hash.match('#'))
-		fixedNavbarOnScroll();
-
 	jQuery('.full-panel').each(function() {
 
 		// declare the variable to affect the defined data-type
 		var jQueryscroll = jQuery(this);
+
+		fixedNavbarOnScroll();
 
 		jQuery(window).scroll(function() {
 

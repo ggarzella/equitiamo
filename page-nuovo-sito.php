@@ -40,6 +40,7 @@
 </head>
 
 <body>
+    <div class="container-fluid">
     <!--<table id="wrapper">
         <tr>
             <td>
@@ -47,6 +48,7 @@
             </td>
         </tr>
     </table>-->
-    <img id="coming-soon" class="centered" src="<?=get_template_directory_uri() ?>/images/logo-under-construction.png"/>
+        <img id="coming-soon" class="centered" src="<?=get_template_directory_uri() ?>/images/logo-under-construction.png"/>
+    </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="page">
+<div id="page" class="mainContent full-panel">
 
     <img class="img-responsive" src="<?=get_template_directory_uri()."/images/11-2.jpg"?>"/>
 

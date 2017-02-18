@@ -87,6 +87,7 @@ function equitiamo_show_menu($themeName) {
 }
 
 
+
 function equitiamo_get_child_list_query($path) {
     $parent = get_page_by_path($path);
     $query = new WP_Query(array('post_type' => 'page', 'post_parent' => $parent->ID, 'orderby' => 'menu_order', 'order' => 'ASC'));
@@ -168,6 +169,7 @@ function equitiamo_paginate_links() {
 }
 
 
+
 function equitiamo_image_class_filter($classes) {
     return 'img-responsive';
 }
@@ -188,29 +190,7 @@ add_image_size( 'equitiamo-image-size-name', 600, 600, false );
 
 
 
-/*function iframe_func($atts, $content = null){
-    return '<div class="iframe_wrap"><iframe src="' . $content . '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
-}
-add_shortcode('video', 'iframe_func');*/
-
-
 function iframe_func($atts, $content = null){
     return '<div class="embed-responsive embed-responsive-4by3"><iframe src="' . $content . '" class="embed-responsive-item"></iframe></div>';
 }
 add_shortcode('video', 'iframe_func');
-
-
-
-/*function equitiamo_redirect() {
-    $page = get_page_by_path('nuovo-sito');
-    $url = get_permalink($page->ID);
-
-    var_dump(!is_user_logged_in());
-
-    if( !is_user_logged_in() ){
-        wp_redirect($url);
-        exit;
-    } else
-        return;
-}
-add_action( 'template_redirect', 'equitiamo_redirect' );*/

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="row mainContent">
+	<div class="row mainContent full-panel">
 
 	<?php get_template_part('includes/index', 'carousel'); ?>
 

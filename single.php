@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="single">
+<div id="single" class="mainContent full-panel">
 
     <div class="in-panel">
 

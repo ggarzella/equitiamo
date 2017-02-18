@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="blog">
+<div id="blog" class="mainContent full-panel">
 
     <div class="in-panel">
 
